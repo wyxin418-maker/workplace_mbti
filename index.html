@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta name="description" content="职场 MBTI 幸存者测试，12 道工位修罗场题，测出你的上班真面目。" />
+    <title>职场 MBTI 幸存者测试</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <main class="app" id="app">
+      <section class="screen screen-home is-active" id="homeScreen" aria-labelledby="homeTitle">
+        <div class="speed-lines" aria-hidden="true"></div>
+        <div class="hero-card panel-shock">
+          <p class="eyebrow">WORKPLACE MBTI REPORT</p>
+          <h1 id="homeTitle">测测你的<br />工位真面目</h1>
+          <p class="hero-copy">这不是普通 MBTI，这是上班限定版：开会、甩锅、加班、跨部门拉扯，12 题强制二选一。</p>
+          <div class="meme-stage" aria-label="原创职场崩溃漫画主视觉">
+            <div class="meme-head">
+              <span class="meme-eye"></span>
+              <span class="meme-eye meme-eye-right"></span>
+              <span class="meme-mouth"></span>
+            </div>
+            <div class="meme-bubble bubble-left">DDL<br />追我</div>
+            <div class="meme-bubble bubble-right">需求<br />又变</div>
+            <div class="meme-desk">工位求生中...</div>
+          </div>
+          <button class="primary-btn" type="button" id="startBtn">开测，看看我的班味人格</button>
+          <p class="safe-note">轻娱乐测试｜不收集个人信息｜结果适合截图转发</p>
+        </div>
+        <div class="ticker" aria-hidden="true">
+          <span>开会如渡劫</span>
+          <span>甩锅别沾边</span>
+          <span>需求像回旋镖</span>
+          <span>工位人格藏不住</span>
+        </div>
+      </section>
+
+      <section class="screen screen-quiz" id="quizScreen" aria-labelledby="questionTitle">
+        <div class="quiz-topbar">
+          <button class="ghost-btn" type="button" id="backBtn">上一题</button>
+          <div class="progress-wrap" aria-label="答题进度">
+            <span id="progressText">01 / 12</span>
+            <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+          </div>
+        </div>
+        <article class="question-card panel-shock">
+          <div class="question-meme" id="questionMeme" aria-hidden="true"></div>
+          <p class="question-tag" id="questionTag">会议副本</p>
+          <h2 id="questionTitle"></h2>
+          <div class="options" id="options"></div>
+        </article>
+      </section>
+
+      <section class="screen screen-result" id="resultScreen" aria-labelledby="resultType">
+        <article class="result-card panel-shock" id="captureCard">
+          <p class="eyebrow">YOUR WORKPLACE SURVIVAL TYPE</p>
+          <div class="result-header">
+            <div>
+              <p class="result-label">你的职场 MBTI</p>
+              <h2 id="resultType"></h2>
+            </div>
+            <div class="result-avatar" id="resultAvatar" aria-hidden="true"></div>
+          </div>
+          <h3 id="resultName"></h3>
+          <p class="punchline" id="resultPunchline"></p>
+          <div class="result-grid">
+            <section>
+              <h4>职场高光</h4>
+              <p id="resultPower"></p>
+            </section>
+            <section>
+              <h4>致命短板</h4>
+              <p id="resultCrash"></p>
+            </section>
+            <section>
+              <h4>适配岗位/同事说明</h4>
+              <p id="resultManual"></p>
+            </section>
+          </div>
+          <p class="share-tip">长按截图，把这张工位人格战报甩进群里，看看谁先破防。</p>
+        </article>
+        <button class="primary-btn restart-btn" type="button" id="restartBtn">再测一次，看看班味变没变</button>
+      </section>
+    </main>
+    <script src="./js/main.js?v=20260616-2"></script>
+  </body>
+</html>
