@@ -215,6 +215,47 @@ h1 {
   transform: rotate(10deg);
 }
 
+.bubble-callout-left {
+  left: 1.5vw;
+  top: 22vw;
+  min-width: 19vw;
+  background: #ffe100;
+  color: var(--jd-red);
+  font-size: 4.4vw;
+  transform: rotate(12deg);
+}
+
+.bubble-callout-right {
+  right: 1.2vw;
+  top: 25vw;
+  min-width: 24vw;
+  background: #fff;
+  color: var(--ink);
+  font-size: 4.1vw;
+  transform: rotate(-10deg);
+}
+
+.callout {
+  position: absolute;
+  z-index: 2;
+  padding: 1.4vw 2vw;
+  border: 0.6vw solid var(--ink);
+  border-radius: 2.8vw;
+  background: #fff;
+  box-shadow: 0.55vw 0.55vw 0 var(--ink);
+  font-size: 3.2vw;
+  font-weight: 1000;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.callout-three {
+  left: 50%;
+  bottom: 14vw;
+  background: #ffe100;
+  transform: translateX(-50%) rotate(-2deg);
+}
+
 .meme-desk {
   position: absolute;
   left: 8vw;
@@ -629,6 +670,56 @@ h1 {
   line-height: 1.45;
 }
 
+.break-card {
+  margin-bottom: 4vw;
+  padding: 3.2vw;
+  border: 0.8vw solid var(--ink);
+  border-radius: 3.5vw;
+  background: #ffe100;
+  box-shadow: 0.7vw 0.7vw 0 var(--ink);
+  transform: rotate(-0.8deg);
+}
+
+.break-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3vw;
+  margin-bottom: 2vw;
+  font-size: 4vw;
+  font-weight: 1000;
+}
+
+.break-head strong {
+  color: var(--jd-red);
+  font-size: 8vw;
+  line-height: 1;
+  text-shadow: 0.45vw 0.45vw 0 #fff, 0.8vw 0.8vw 0 var(--ink);
+}
+
+.break-track {
+  height: 4vw;
+  margin-bottom: 2.5vw;
+  border: 0.55vw solid var(--ink);
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.break-bar {
+  width: 0;
+  height: 100%;
+  background: repeating-linear-gradient(45deg, var(--jd-red) 0 2vw, #111 2vw 4vw);
+  transition: width 0.45s ease;
+}
+
+.break-card p {
+  margin: 0;
+  font-size: 3.8vw;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
 .result-grid {
   display: grid;
   gap: 3vw;
@@ -663,6 +754,36 @@ h1 {
   font-size: 3.4vw;
   font-weight: 900;
   text-align: center;
+}
+
+.share-quote {
+  position: relative;
+  margin: 4vw 0 0;
+  padding: 3.2vw 3.2vw 3.2vw 10vw;
+  border: 0.75vw solid var(--ink);
+  border-radius: 3.2vw;
+  background: var(--jd-red);
+  color: #fff;
+  box-shadow: 0.65vw 0.65vw 0 var(--ink);
+  font-size: 4vw;
+  font-weight: 1000;
+  line-height: 1.45;
+}
+
+.share-quote::before {
+  content: "爆";
+  position: absolute;
+  left: 2vw;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 6vw;
+  height: 6vw;
+  border: 0.55vw solid var(--ink);
+  border-radius: 50%;
+  background: #ffe100;
+  color: var(--ink);
+  transform: translateY(-50%) rotate(-12deg);
 }
 
 .restart-btn {
