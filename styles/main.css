@@ -416,8 +416,24 @@ h1 {
 .result-card {
   padding: 5.2vw;
   background:
+    radial-gradient(circle at 90% 12%, rgba(225, 37, 27, 0.28) 0 10vw, transparent 10.5vw),
+    repeating-linear-gradient(-8deg, transparent 0 5vw, rgba(0, 0, 0, 0.05) 5vw 5.8vw),
     linear-gradient(180deg, rgba(255, 225, 0, 0.24), transparent 30%),
     var(--paper);
+}
+
+.result-card::before {
+  content: "工位战报";
+  position: absolute;
+  top: -4vw;
+  right: 6vw;
+  padding: 1.6vw 2.5vw;
+  border: 0.7vw solid var(--ink);
+  background: #ffe100;
+  box-shadow: 0.6vw 0.6vw 0 var(--ink);
+  font-size: 3.2vw;
+  font-weight: 1000;
+  transform: rotate(8deg);
 }
 
 .result-header {
@@ -436,18 +452,160 @@ h1 {
 }
 
 .result-avatar {
+  position: relative;
   display: grid;
   place-items: center;
   width: 24vw;
   height: 24vw;
   border: 0.9vw solid var(--ink);
-  border-radius: 38% 62% 44% 56%;
-  background: var(--jd-red);
+  border-radius: 42% 58% 45% 55%;
+  background:
+    radial-gradient(circle at 35% 35%, #fff 0 3vw, transparent 3.2vw),
+    var(--jd-red);
   color: #fff;
   box-shadow: 1vw 1vw 0 var(--ink);
-  font-size: 5.2vw;
-  font-weight: 1000;
   transform: rotate(8deg);
+}
+
+.result-avatar::before,
+.result-avatar::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 7vw;
+  height: 9vw;
+  border: 0.75vw solid var(--ink);
+  background: #ffe100;
+}
+
+.result-avatar::before {
+  left: -4vw;
+  bottom: 0.5vw;
+  transform: rotate(-24deg);
+}
+
+.result-avatar::after {
+  right: -4vw;
+  bottom: 0.5vw;
+  transform: rotate(24deg);
+}
+
+.avatar-eye {
+  position: absolute;
+  top: 7.2vw;
+  width: 3.8vw;
+  height: 3.8vw;
+  border: 0.65vw solid var(--ink);
+  border-radius: 50%;
+  background: #fff;
+}
+
+.avatar-eye::after {
+  content: "";
+  position: absolute;
+  left: 0.8vw;
+  top: 0.8vw;
+  width: 1.3vw;
+  height: 1.3vw;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.avatar-eye-left {
+  left: 5.2vw;
+}
+
+.avatar-eye-right {
+  right: 5.2vw;
+}
+
+.avatar-mouth {
+  position: absolute;
+  left: 50%;
+  bottom: 5.5vw;
+  width: 8vw;
+  height: 3.6vw;
+  border: 0.65vw solid var(--ink);
+  border-top: 0;
+  border-radius: 0 0 7vw 7vw;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.avatar-sweat {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  width: 3vw;
+  height: 4.8vw;
+  border: 0.45vw solid var(--ink);
+  border-radius: 50% 50% 55% 45%;
+  background: #54d7ff;
+  transform: rotate(18deg);
+}
+
+.avatar-code {
+  position: absolute;
+  left: 50%;
+  bottom: -3.3vw;
+  padding: 0.8vw 1.6vw;
+  border: 0.55vw solid var(--ink);
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0.4vw 0.4vw 0 var(--ink);
+  font-size: 3.2vw;
+  font-weight: 1000;
+  transform: translateX(-50%) rotate(-6deg);
+}
+
+.avatar-robot .avatar-mouth,
+.avatar-judge .avatar-mouth,
+.avatar-commander .avatar-mouth,
+.avatar-crown .avatar-mouth {
+  height: 0;
+  border-top: 0.65vw solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+}
+
+.avatar-dream .avatar-eye,
+.avatar-angel .avatar-eye,
+.avatar-spark .avatar-eye {
+  border-radius: 44% 56% 50% 50%;
+}
+
+.avatar-fire,
+.avatar-debate,
+.avatar-rocket,
+.avatar-crown {
+  background:
+    radial-gradient(circle at 35% 35%, #fff 0 3vw, transparent 3.2vw),
+    linear-gradient(135deg, #ff3b2f, #ffe100);
+}
+
+.avatar-tool,
+.avatar-detective,
+.avatar-robot,
+.avatar-judge {
+  background:
+    radial-gradient(circle at 35% 35%, #fff 0 3vw, transparent 3.2vw),
+    linear-gradient(135deg, #1f1f1f, #e1251b);
+}
+
+.avatar-angel,
+.avatar-glue,
+.avatar-leader,
+.avatar-artist {
+  background:
+    radial-gradient(circle at 35% 35%, #fff 0 3vw, transparent 3.2vw),
+    linear-gradient(135deg, #ff7a70, #ffe100);
+}
+
+.avatar-mystic,
+.avatar-dream {
+  background:
+    radial-gradient(circle at 35% 35%, #fff 0 3vw, transparent 3.2vw),
+    linear-gradient(135deg, #6e42ff, #e1251b);
 }
 
 .result-card h3 {
